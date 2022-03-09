@@ -29,6 +29,34 @@
         </div>
     </header>
     
+    <div class="form">
+        <h2 class="form__title">Генератор паролей</h2>
+        <div class="form__option">
+            <div class="form__result" id="result"></div>
+        </div>
+        <div class="form__option">
+            <label for="length">Длина пароля</label>
+            <input type="number" id="length" min="4" max="25" value="16">
+        </div>
+        <div class="form__option">
+            <label for="lowerCase">Строчные буквы</label>
+            <input type="checkbox" id="lowerCase" checked>
+        </div>
+        <div class="form__option">
+            <label for="upperCase">Заглавные буквы</label>
+            <input type="checkbox" id="upperCase" checked>
+        </div>
+        <div class="form__option">
+            <label for="symbols">Символы</label>
+            <input type="checkbox" id="symbols" checked>
+        </div>
+        <div class="form__option">
+            <label for="numbers">Цифры</label>
+            <input type="checkbox" id="numbers" checked>
+        </div>
+        <button class="form__button" id="generate">Сгенерировать</button>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
