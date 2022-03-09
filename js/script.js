@@ -6,11 +6,10 @@ const button = document.getElementById('generate')
 
 // * Бургер-меню. Запрет на скролл при активном меню
 
-
 menu.addEventListener('click', () =>  document.body.classList.toggle('noScroll'))
 
 // * Генератор пароля
-
+//TODO: Разобраться с багом по min, max
 const generator = () => Math.floor(Math.random() * (max + 1 - min) + min)
 const generateRandomLowerCase = () => String.fromCharCode(97, 122)
 const generateRandomUpperCase = () => String.fromCharCode(65, 90)
@@ -37,7 +36,7 @@ const generate = () => {
         const k = generator(0, 3)
         if (lowerCase && k === 0) {
             password += generateRandomLowerCase()
-        } else if (upperCase && l === 1) {
+        } else if (upperCase && k === 1) {
             password += generateRandomUpperCase()
         } else if (symbols && k === 2) {
             password += generateRandomSymbols()
@@ -50,4 +49,4 @@ const generate = () => {
     document.getElementById('result').textContent = password
 }
 
-button.addEventListener('click', generate())
+button.addEventListener('click', () => generate())
